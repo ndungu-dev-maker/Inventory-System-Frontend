@@ -26,7 +26,7 @@ function App() {
   const handleLogin = async () => {
 
     const response = await fetch(
-      "http://127.0.0.1:5000/login",
+      "https://inventory-system-backend-kqu6.onrender.com/login",
       {
         method: "POST",
         headers: {
@@ -63,7 +63,7 @@ function App() {
   const handleRegister = async () => {
 
     const response = await fetch(
-      "http://127.0.0.1:5000/register",
+      "https://inventory-system-backend-kqu6.onrender.com/register",
       {
         method: "POST",
         headers: {
@@ -92,7 +92,7 @@ function App() {
       localStorage.getItem("user_id");
 
     const response = await fetch(
-      `http://127.0.0.1:5000/products/${user_id}`
+      `https://inventory-system-backend-kqu6.onrender.com/products/${user_id}`
     );
 
     const data = await response.json();
@@ -109,7 +109,7 @@ function App() {
       localStorage.getItem("user_id");
 
     const response = await fetch(
-      "http://127.0.0.1:5000/add-product",
+      "https://inventory-system-backend-kqu6.onrender.com/add-product",
       {
         method: "POST",
         headers: {
@@ -148,7 +148,7 @@ function App() {
     }
 
     await fetch(
-      `http://127.0.0.1:5000/update-product/${selectedProductId}`,
+      `https://inventory-system-backend-kqu6.onrender.com/update-product/${selectedProductId}`,
       {
         method: "PUT",
 
@@ -175,7 +175,7 @@ function App() {
   async (id) => {
 
     await fetch(
-      `http://127.0.0.1:5000/delete-product/${id}`,
+      `https://inventory-system-backend-kqu6.onrender.com/delete-product/${id}`,
       {
         method: "DELETE"
       }
